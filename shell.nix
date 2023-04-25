@@ -1,9 +1,19 @@
 { pkgs ? import <nixpkgs> {}
+/* Using old python versions https://github.com/DavHau/mach-nix/blob/master/examples.md */
+, mach-nix ? import (builtins.fetchGit {
+    url = "https://github.com/DavHau/mach-nix";
+    ref = "refs/tags/3.5.0";
+}) { 
+    python = "python37";
+}
 , extraPkgs ? []
 }:
 
 let
   fhs = pkgs.buildFHSUserEnvBubblewrap {
+    /* permittedInsecurePackages = pkgs: (with pkgs; [ */
+    /*   python-2.7.18.6 */
+    /* ]); */
     name = "yocto-fhs";
     targetPkgs = pkgs: (with pkgs; [
         attr
@@ -26,7 +36,7 @@ let
         ncurses
         patch
         perl
-        python3
+        python2
         rpcsvc-proto
         unzip
         util-linux
@@ -35,7 +45,8 @@ let
         xz
         zlib
         zstd
-      ] ++ extraPkgs);
+        texinfo
+      ] ++ extraPkgs ++ [mach-nix.nixpkgs.python37]);
     multiPkgs = null;
     extraOutputsToInstall = [ "dev" ];
     profile =
