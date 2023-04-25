@@ -1,8 +1,8 @@
 # yocto-pi-zero
 
-Yocto repository based on "Ready, Set, Yocto!" for Raspberry Pi Zero [[https://gist.github.com/jynik/dca2b85a04cd48b2e3a9fcb92fa51a65]]
+Yocto repository based on ["Ready, Set, Yocto!" for Raspberry Pi Zero](https://gist.github.com/jynik/dca2b85a04cd48b2e3a9fcb92fa51a65)
 ## Setup
-Install nix [[https://nixos.org/download.html#download-nix]]
+Install [nix](https://nixos.org/download.html#download-nix)
 
 Run 
 ```bash
