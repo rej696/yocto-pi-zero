@@ -46,6 +46,7 @@ let
         zlib
         zstd
         texinfo
+        bmap-tools
       ] ++ extraPkgs ++ [mach-nix.nixpkgs.python37]);
     multiPkgs = null;
     extraOutputsToInstall = [ "dev" ];

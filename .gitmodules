@@ -10,3 +10,6 @@
 	path = meta-openembedded
 	url = git://git.openembedded.org/meta-openembedded
 	branch = rocko
+[submodule "downloads/rpi-linux-kernel"]
+	path = downloads/rpi-linux-kernel
+	url = https://github.com/raspberrypi/linux.git

@@ -1,0 +1,7 @@
+builds/**/bitbake-cookerdaemon.log
+builds/**/bitbake.lock
+builds/**/cache
+builds/**/downloads
+builds/**/sstate-cache
+builds/**/tmp
+
